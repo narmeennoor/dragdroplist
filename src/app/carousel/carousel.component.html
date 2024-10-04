@@ -1,0 +1,28 @@
+
+<div class="carousel">
+
+    <div class="carousel-inner">
+      <img [src]="images[currentImageIndex].url" [alt]="images[currentImageIndex].alt">
+    </div>
+    <div class="carousel-controls">
+      <button mat-icon-button (click)="previousImage()">
+        <mat-icon>chevron_left</mat-icon>
+      </button>
+      <button mat-icon-button (click)="nextImage()">
+        <mat-icon>chevron_right</mat-icon>
+      </button>
+    </div>
+    <div class="carousel-indicators">
+      <button mat-icon-button *ngFor="let image of images; let i = index" (click)="setCurrentImage(i)">
+        <mat-icon *ngIf="i === currentImageIndex">fiber_manual_record</mat-icon>
+        <mat-icon *ngIf="i !== currentImageIndex">radio_button_unchecked</mat-icon>
+      </button>
+    </div>
+  </div>
+  <button mat-raised-button color="primary" routerLink=''>
+ 
+    Go Back
+    <mat-icon>arrow_backward</mat-icon>
+  </button>
+  
+  

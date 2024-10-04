@@ -1,0 +1,52 @@
+<div class="container" cdkDropListGroup>
+  <h2>To-Do List</h2>
+
+  <!-- New task input -->
+  <div class="task-input">
+    <input [(ngModel)]="newTask" placeholder="Enter new task" />
+    <button (click)="addTask()">Add Task</button>
+  </div>
+
+
+  
+    <!-- To-Do List -->
+    <div class="list-container">
+      <h3>To Do</h3>
+      <div 
+  cdkDropList 
+  id="todoList" 
+  [cdkDropListData]="todo" 
+  class="todo-list"
+  (cdkDropListDropped)="drop($event)" 
+>
+<div *ngFor="let task of todo; let i = index" cdkDrag class="task">
+  {{ task }}
+  <i class="material-icons edit-icon" (click)="editTask(i)">edit</i>
+  <i class="material-icons delete-icon" (click)="deleteTask(i)">delete</i>
+</div>
+</div>
+  
+    <!-- Done List -->
+    <div class="list-container">
+      <h3>Done</h3>
+      <div 
+  cdkDropList 
+  id="doneList" 
+  [cdkDropListData]="done" 
+  class="done-list"
+  (cdkDropListDropped)="drop($event)" 
+>
+  <div *ngFor="let task of done" cdkDrag class="task">
+    {{ task }}
+  </div>
+</div>
+    </div>
+   
+
+  </div>
+</div>
+<button mat-raised-button color="primary" routerLink="/carousel-page">
+ 
+  Go to Carousel Page
+  <mat-icon>arrow_forward</mat-icon>
+</button>

@@ -1,0 +1,107 @@
+   .container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #e0bbbb;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 34, 34, 0.1);
+  }
+  
+  .task-input {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .task-input input {
+    padding: 10px;
+    margin-right: 10px;
+    width: 250px;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .task-input button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .task-input button:hover {
+    background-color: #3e8e41;
+  }
+  
+  .list-container1 {
+    width: 45%;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #eea9b8;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  .list-container {
+    width: 45%;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .list-container h3 {
+    margin-top: 0;
+    font-weight: bold;
+    font-size: 18px;
+  }
+  
+  .todo-list, .done-list {
+    min-height: 200px;
+    padding: 10px;
+    width:45%
+  }
+  
+  .task {
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+    cursor: grab;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .task:hover {
+    background-color: #f0f0f0;
+  }
+ 
+  .edit-icon, .delete-icon {
+    cursor: pointer;
+    font-size: 18px;
+    position: absolute;
+    right: 10px;
+  }
+  
+  .edit-icon {
+    color: #3bb13f;
+    top: 10px;
+  }
+  
+  .delete-icon {
+    color: #FF0000;
+    top: 10px;
+    right: 30px; /* Move the delete icon to the right of the edit icon */
+  }
+  
+  .task {
+    position: relative;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding-right: 60px; /* Add some extra padding to the right to make room for the icons */
+  }
